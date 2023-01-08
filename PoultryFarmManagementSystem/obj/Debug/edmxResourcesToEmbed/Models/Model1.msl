@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PoultryFarmManagementSystemModelStoreContainer" CdmEntityContainer="PoultryFarmManagementSystemEntities10">
+    <EntitySetMapping Name="BroilerBatches">
+      <EntityTypeMapping TypeName="PoultryFarmManagementSystemModel.BroilerBatch">
+        <MappingFragment StoreEntitySet="BroilerBatch">
+          <ScalarProperty Name="bb_id" ColumnName="bb_id" />
+          <ScalarProperty Name="bb_name" ColumnName="bb_name" />
+          <ScalarProperty Name="bb_arrivaldate" ColumnName="bb_arrivaldate" />
+          <ScalarProperty Name="bb_totalqty" ColumnName="bb_totalqty" />
+          <ScalarProperty Name="bb_totalcost" ColumnName="bb_totalcost" />
+          <ScalarProperty Name="pltry_id" ColumnName="pltry_id" />
+          <ScalarProperty Name="worker_id" ColumnName="worker_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BroilerBatchDatas">
+      <EntityTypeMapping TypeName="PoultryFarmManagementSystemModel.BroilerBatchData">
+        <MappingFragment StoreEntitySet="BroilerBatchData">
+          <ScalarProperty Name="bbd_id" ColumnName="bbd_id" />
+          <ScalarProperty Name="feed_type" ColumnName="feed_type" />
+          <ScalarProperty Name="costoffeedinkg" ColumnName="costoffeedinkg" />
+          <ScalarProperty Name="vaccine_name" ColumnName="vaccine_name" />
+          <ScalarProperty Name="totalvaccine_cost" ColumnName="totalvaccine_cost" />
+          <ScalarProperty Name="totalfeedconsumedinkg" ColumnName="totalfeedconsumedinkg" />
+          <ScalarProperty Name="avgbodyweightingrams" ColumnName="avgbodyweightingrams" />
+          <ScalarProperty Name="ageindays" ColumnName="ageindays" />
+          <ScalarProperty Name="pltry_id" ColumnName="pltry_id" />
+          <ScalarProperty Name="mortality" ColumnName="mortality" />
+          <ScalarProperty Name="bb_id" ColumnName="bb_id" />
+          <ScalarProperty Name="sale_status" ColumnName="sale_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LayerBatches">
+      <EntityTypeMapping TypeName="PoultryFarmManagementSystemModel.LayerBatch">
+        <MappingFragment StoreEntitySet="LayerBatch">
+          <ScalarProperty Name="lb_id" ColumnName="lb_id" />
+          <ScalarProperty Name="lb_name" ColumnName="lb_name" />
+          <ScalarProperty Name="lb_arrivaldate" ColumnName="lb_arrivaldate" />
+          <ScalarProperty Name="lb_totalqty" ColumnName="lb_totalqty" />
+          <ScalarProperty Name="lb_totalcost" ColumnName="lb_totalcost" />
+          <ScalarProperty Name="pltry_id" ColumnName="pltry_id" />
+          <ScalarProperty Name="worker_id" ColumnName="worker_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LayerBatchDatas">
+      <EntityTypeMapping TypeName="PoultryFarmManagementSystemModel.LayerBatchData">
+        <MappingFragment StoreEntitySet="LayerBatchData">
+          <ScalarProperty Name="lbd_id" ColumnName="lbd_id" />
+          <ScalarProperty Name="feed_type" ColumnName="feed_type" />
+          <ScalarProperty Name="costoffeedinkg" ColumnName="costoffeedinkg" />
+          <ScalarProperty Name="vaccine_name" ColumnName="vaccine_name" />
+          <ScalarProperty Name="totalvaccine_cost" ColumnName="totalvaccine_cost" />
+          <ScalarProperty Name="totalfeedconsumedinkg" ColumnName="totalfeedconsumedinkg" />
+          <ScalarProperty Name="eggs_produced" ColumnName="eggs_produced" />
+          <ScalarProperty Name="ageindays" ColumnName="ageindays" />
+          <ScalarProperty Name="pltry_id" ColumnName="pltry_id" />
+          <ScalarProperty Name="mortality" ColumnName="mortality" />
+          <ScalarProperty Name="lb_id" ColumnName="lb_id" />
+          <ScalarProperty Name="sale_status" ColumnName="sale_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Poultries">
+      <EntityTypeMapping TypeName="PoultryFarmManagementSystemModel.Poultry">
+        <MappingFragment StoreEntitySet="Poultries">
+          <ScalarProperty Name="pltry_id" ColumnName="pltry_id" />
+          <ScalarProperty Name="pltry_name" ColumnName="pltry_name" />
+          <ScalarProperty Name="pltry_address" ColumnName="pltry_address" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="worker_id" ColumnName="worker_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Poultrires">
+      <EntityTypeMapping TypeName="PoultryFarmManagementSystemModel.Poultrire">
+        <MappingFragment StoreEntitySet="Poultrires">
+          <ScalarProperty Name="pltry_id" ColumnName="pltry_id" />
+          <ScalarProperty Name="pltry_name" ColumnName="pltry_name" />
+          <ScalarProperty Name="pltry_address" ColumnName="pltry_address" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="PoultryFarmManagementSystemModel.Sale">
+        <MappingFragment StoreEntitySet="Sales">
+          <ScalarProperty Name="sale_id" ColumnName="sale_id" />
+          <ScalarProperty Name="bb_id" ColumnName="bb_id" />
+          <ScalarProperty Name="lb_id" ColumnName="lb_id" />
+          <ScalarProperty Name="b_name" ColumnName="b_name" />
+          <ScalarProperty Name="bb_totalqty" ColumnName="bb_totalqty" />
+          <ScalarProperty Name="bb_avgbodyweight" ColumnName="bb_avgbodyweight" />
+          <ScalarProperty Name="lb_totaleggsintrays" ColumnName="lb_totaleggsintrays" />
+          <ScalarProperty Name="pltry_id" ColumnName="pltry_id" />
+          <ScalarProperty Name="c_name" ColumnName="c_name" />
+          <ScalarProperty Name="c_address" ColumnName="c_address" />
+          <ScalarProperty Name="c_qty" ColumnName="c_qty" />
+          <ScalarProperty Name="s_status" ColumnName="s_status" />
+          <ScalarProperty Name="bb_priceperchick" ColumnName="bb_priceperchick" />
+          <ScalarProperty Name="lb_pricepertryofeggs" ColumnName="lb_pricepertryofeggs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="PoultryFarmManagementSystemModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_phoneno" ColumnName="user_phoneno" />
+          <ScalarProperty Name="user_address" ColumnName="user_address" />
+          <ScalarProperty Name="user_type" ColumnName="user_type" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workers">
+      <EntityTypeMapping TypeName="PoultryFarmManagementSystemModel.Worker">
+        <MappingFragment StoreEntitySet="Workers">
+          <ScalarProperty Name="worker_id" ColumnName="worker_id" />
+          <ScalarProperty Name="worker_name" ColumnName="worker_name" />
+          <ScalarProperty Name="worker_email" ColumnName="worker_email" />
+          <ScalarProperty Name="worker_address" ColumnName="worker_address" />
+          <ScalarProperty Name="worker_phoneno" ColumnName="worker_phoneno" />
+          <ScalarProperty Name="worker_password" ColumnName="worker_password" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="pltry_id" ColumnName="pltry_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

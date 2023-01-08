@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PoultryFarmManagementSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BroilerBatch">
+    <Key>
+      <PropertyRef Name="bb_id" />
+    </Key>
+    <Property Name="bb_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bb_name" Type="varchar" MaxLength="50" />
+    <Property Name="bb_arrivaldate" Type="varchar" MaxLength="50" />
+    <Property Name="bb_totalqty" Type="int" />
+    <Property Name="bb_totalcost" Type="int" />
+    <Property Name="pltry_id" Type="int" />
+    <Property Name="worker_id" Type="int" />
+  </EntityType>
+  <EntityType Name="BroilerBatchData">
+    <Key>
+      <PropertyRef Name="bbd_id" />
+    </Key>
+    <Property Name="bbd_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="feed_type" Type="varchar" MaxLength="50" />
+    <Property Name="costoffeedinkg" Type="int" />
+    <Property Name="vaccine_name" Type="varchar" MaxLength="50" />
+    <Property Name="totalvaccine_cost" Type="int" />
+    <Property Name="totalfeedconsumedinkg" Type="int" />
+    <Property Name="avgbodyweightingrams" Type="int" />
+    <Property Name="ageindays" Type="int" />
+    <Property Name="pltry_id" Type="int" />
+    <Property Name="mortality" Type="int" />
+    <Property Name="bb_id" Type="int" />
+    <Property Name="sale_status" Type="int" />
+  </EntityType>
+  <EntityType Name="LayerBatch">
+    <Key>
+      <PropertyRef Name="lb_id" />
+    </Key>
+    <Property Name="lb_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="lb_name" Type="varchar" MaxLength="50" />
+    <Property Name="lb_arrivaldate" Type="varchar" MaxLength="50" />
+    <Property Name="lb_totalqty" Type="int" />
+    <Property Name="lb_totalcost" Type="int" />
+    <Property Name="pltry_id" Type="int" />
+    <Property Name="worker_id" Type="int" />
+  </EntityType>
+  <EntityType Name="LayerBatchData">
+    <Key>
+      <PropertyRef Name="lbd_id" />
+    </Key>
+    <Property Name="lbd_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="feed_type" Type="varchar" MaxLength="50" />
+    <Property Name="costoffeedinkg" Type="int" />
+    <Property Name="vaccine_name" Type="varchar" MaxLength="50" />
+    <Property Name="totalvaccine_cost" Type="int" />
+    <Property Name="totalfeedconsumedinkg" Type="int" />
+    <Property Name="eggs_produced" Type="int" />
+    <Property Name="ageindays" Type="int" />
+    <Property Name="pltry_id" Type="int" />
+    <Property Name="mortality" Type="int" />
+    <Property Name="lb_id" Type="int" />
+    <Property Name="sale_status" Type="int" />
+  </EntityType>
+  <EntityType Name="Poultries">
+    <Key>
+      <PropertyRef Name="pltry_id" />
+    </Key>
+    <Property Name="pltry_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pltry_name" Type="varchar" MaxLength="50" />
+    <Property Name="pltry_address" Type="varchar" MaxLength="50" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="worker_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Poultrires">
+    <Key>
+      <PropertyRef Name="pltry_id" />
+    </Key>
+    <Property Name="pltry_id" Type="int" Nullable="false" />
+    <Property Name="pltry_name" Type="varchar" MaxLength="50" />
+    <Property Name="pltry_address" Type="varchar" MaxLength="50" />
+    <Property Name="user_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="sale_id" />
+    </Key>
+    <Property Name="sale_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bb_id" Type="int" />
+    <Property Name="lb_id" Type="int" />
+    <Property Name="b_name" Type="varchar" MaxLength="50" />
+    <Property Name="bb_totalqty" Type="int" />
+    <Property Name="bb_avgbodyweight" Type="int" />
+    <Property Name="lb_totaleggsintrays" Type="int" />
+    <Property Name="pltry_id" Type="int" />
+    <Property Name="c_name" Type="varchar" MaxLength="50" />
+    <Property Name="c_address" Type="varchar" MaxLength="50" />
+    <Property Name="c_qty" Type="int" />
+    <Property Name="s_status" Type="int" />
+    <Property Name="bb_priceperchick" Type="int" />
+    <Property Name="lb_pricepertryofeggs" Type="int" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_name" Type="varchar" MaxLength="50" />
+    <Property Name="user_email" Type="varchar" MaxLength="50" />
+    <Property Name="user_phoneno" Type="varchar" MaxLength="20" />
+    <Property Name="user_address" Type="varchar" MaxLength="50" />
+    <Property Name="user_type" Type="int" />
+    <Property Name="user_password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Workers">
+    <Key>
+      <PropertyRef Name="worker_id" />
+    </Key>
+    <Property Name="worker_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="worker_name" Type="varchar" MaxLength="50" />
+    <Property Name="worker_email" Type="varchar" MaxLength="50" />
+    <Property Name="worker_address" Type="varchar" MaxLength="50" />
+    <Property Name="worker_phoneno" Type="varchar" MaxLength="20" />
+    <Property Name="worker_password" Type="varchar" MaxLength="50" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="pltry_id" Type="int" />
+  </EntityType>
+  <Association Name="FK__BroilerBa__bb_id__5DCAEF64">
+    <End Role="BroilerBatch" Type="Self.BroilerBatch" Multiplicity="0..1" />
+    <End Role="BroilerBatchData" Type="Self.BroilerBatchData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BroilerBatch">
+        <PropertyRef Name="bb_id" />
+      </Principal>
+      <Dependent Role="BroilerBatchData">
+        <PropertyRef Name="bb_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BroilerBa__pltry__4222D4EF">
+    <End Role="Poultries" Type="Self.Poultries" Multiplicity="0..1" />
+    <End Role="BroilerBatch" Type="Self.BroilerBatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Poultries">
+        <PropertyRef Name="pltry_id" />
+      </Principal>
+      <Dependent Role="BroilerBatch">
+        <PropertyRef Name="pltry_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BroilerBa__pltry__5CD6CB2B">
+    <End Role="Poultries" Type="Self.Poultries" Multiplicity="0..1" />
+    <End Role="BroilerBatchData" Type="Self.BroilerBatchData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Poultries">
+        <PropertyRef Name="pltry_id" />
+      </Principal>
+      <Dependent Role="BroilerBatchData">
+        <PropertyRef Name="pltry_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BroilerBa__worke__4316F928">
+    <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+    <End Role="BroilerBatch" Type="Self.BroilerBatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workers">
+        <PropertyRef Name="worker_id" />
+      </Principal>
+      <Dependent Role="BroilerBatch">
+        <PropertyRef Name="worker_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LayerBatc__lb_id__619B8048">
+    <End Role="LayerBatch" Type="Self.LayerBatch" Multiplicity="0..1" />
+    <End Role="LayerBatchData" Type="Self.LayerBatchData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LayerBatch">
+        <PropertyRef Name="lb_id" />
+      </Principal>
+      <Dependent Role="LayerBatchData">
+        <PropertyRef Name="lb_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LayerBatc__pltry__45F365D3">
+    <End Role="Poultries" Type="Self.Poultries" Multiplicity="0..1" />
+    <End Role="LayerBatch" Type="Self.LayerBatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Poultries">
+        <PropertyRef Name="pltry_id" />
+      </Principal>
+      <Dependent Role="LayerBatch">
+        <PropertyRef Name="pltry_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LayerBatc__pltry__60A75C0F">
+    <End Role="Poultries" Type="Self.Poultries" Multiplicity="0..1" />
+    <End Role="LayerBatchData" Type="Self.LayerBatchData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Poultries">
+        <PropertyRef Name="pltry_id" />
+      </Principal>
+      <Dependent Role="LayerBatchData">
+        <PropertyRef Name="pltry_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LayerBatc__worke__46E78A0C">
+    <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+    <End Role="LayerBatch" Type="Self.LayerBatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workers">
+        <PropertyRef Name="worker_id" />
+      </Principal>
+      <Dependent Role="LayerBatch">
+        <PropertyRef Name="worker_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Poultries__worke__3F466844">
+    <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
+    <End Role="Poultries" Type="Self.Poultries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workers">
+        <PropertyRef Name="worker_id" />
+      </Principal>
+      <Dependent Role="Poultries">
+        <PropertyRef Name="worker_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Poultrire__user___38996AB5">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Poultries" Type="Self.Poultries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="Poultries">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Poultrire__user___6FE99F9F">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Poultrires" Type="Self.Poultrires" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="Poultrires">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Workers__pltry_i__4D94879B">
+    <End Role="Poultries" Type="Self.Poultries" Multiplicity="0..1" />
+    <End Role="Workers" Type="Self.Workers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Poultries">
+        <PropertyRef Name="pltry_id" />
+      </Principal>
+      <Dependent Role="Workers">
+        <PropertyRef Name="pltry_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Workers__user_id__3E52440B">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Workers" Type="Self.Workers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="Workers">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PoultryFarmManagementSystemModelStoreContainer">
+    <EntitySet Name="BroilerBatch" EntityType="Self.BroilerBatch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BroilerBatchData" EntityType="Self.BroilerBatchData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LayerBatch" EntityType="Self.LayerBatch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LayerBatchData" EntityType="Self.LayerBatchData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Poultries" EntityType="Self.Poultries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Poultrires" EntityType="Self.Poultrires" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Workers" EntityType="Self.Workers" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__BroilerBa__bb_id__5DCAEF64" Association="Self.FK__BroilerBa__bb_id__5DCAEF64">
+      <End Role="BroilerBatch" EntitySet="BroilerBatch" />
+      <End Role="BroilerBatchData" EntitySet="BroilerBatchData" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BroilerBa__pltry__4222D4EF" Association="Self.FK__BroilerBa__pltry__4222D4EF">
+      <End Role="Poultries" EntitySet="Poultries" />
+      <End Role="BroilerBatch" EntitySet="BroilerBatch" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BroilerBa__pltry__5CD6CB2B" Association="Self.FK__BroilerBa__pltry__5CD6CB2B">
+      <End Role="Poultries" EntitySet="Poultries" />
+      <End Role="BroilerBatchData" EntitySet="BroilerBatchData" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BroilerBa__worke__4316F928" Association="Self.FK__BroilerBa__worke__4316F928">
+      <End Role="Workers" EntitySet="Workers" />
+      <End Role="BroilerBatch" EntitySet="BroilerBatch" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LayerBatc__lb_id__619B8048" Association="Self.FK__LayerBatc__lb_id__619B8048">
+      <End Role="LayerBatch" EntitySet="LayerBatch" />
+      <End Role="LayerBatchData" EntitySet="LayerBatchData" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LayerBatc__pltry__45F365D3" Association="Self.FK__LayerBatc__pltry__45F365D3">
+      <End Role="Poultries" EntitySet="Poultries" />
+      <End Role="LayerBatch" EntitySet="LayerBatch" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LayerBatc__pltry__60A75C0F" Association="Self.FK__LayerBatc__pltry__60A75C0F">
+      <End Role="Poultries" EntitySet="Poultries" />
+      <End Role="LayerBatchData" EntitySet="LayerBatchData" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LayerBatc__worke__46E78A0C" Association="Self.FK__LayerBatc__worke__46E78A0C">
+      <End Role="Workers" EntitySet="Workers" />
+      <End Role="LayerBatch" EntitySet="LayerBatch" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Poultries__worke__3F466844" Association="Self.FK__Poultries__worke__3F466844">
+      <End Role="Workers" EntitySet="Workers" />
+      <End Role="Poultries" EntitySet="Poultries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Poultrire__user___38996AB5" Association="Self.FK__Poultrire__user___38996AB5">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Poultries" EntitySet="Poultries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Poultrire__user___6FE99F9F" Association="Self.FK__Poultrire__user___6FE99F9F">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Poultrires" EntitySet="Poultrires" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Workers__pltry_i__4D94879B" Association="Self.FK__Workers__pltry_i__4D94879B">
+      <End Role="Poultries" EntitySet="Poultries" />
+      <End Role="Workers" EntitySet="Workers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Workers__user_id__3E52440B" Association="Self.FK__Workers__user_id__3E52440B">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Workers" EntitySet="Workers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
